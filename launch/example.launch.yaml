@@ -1,0 +1,23 @@
+# Copyright 2023 Jonathan Shulgach (jshulgac@andrew.cmu.edu)
+# 
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at https://mozilla.org/MPL/2.0/.
+#
+# Contact: Jonathan Shulgach (jshulgac@andrew.cmu.edu)
+
+# Example command line:
+#  ros2 launch ros_robot_arm example.launch.yaml
+
+
+
+launch:
+
+# Initialize the robot node.
+- node:
+    pkg: ros_robot_arm
+    name: robot_arm
+    #namespace: robot
+    exec: node
+    param:
+    - from: config/robot_params.yaml
